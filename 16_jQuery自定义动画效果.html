@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../jquery-1/jquery-3.5.1.js"></script>
+    <style>
+        div{
+            background: pink;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button>动起来</button>
+<div></div>
+</body>
+<script>
+  $(function() {
+    $("button").click(function(){
+        $("div").animate({
+            left:500,
+            top:300,
+            opacity:0.4,
+            width:500,
+            height:300,
+        },1000)
+    })
+  })
+</script>
+</html>
