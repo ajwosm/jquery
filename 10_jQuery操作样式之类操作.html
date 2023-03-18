@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../jquery-1/jquery-3.5.1.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            transition: all 0.5s;
+        }
+        .current{
+            background: red;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="current">
+
+    </div>
+</body>
+<script>
+  $(function() {
+    //1.添加类 addClass() 相当于追加类名 不影响以前的类名
+      /*$("div").click(function(){
+          $(this).addClass("current")
+      })*/
+      //2.移除类 removeClass
+     /* $("div").click(function(){
+          $(this).removeClass("current")
+      })*/
+      //3.切换类 toggleClass
+      $("div").click(function(){
+          $(this).toggleClass("current")
+      })
+  })
+</script>
+</html>

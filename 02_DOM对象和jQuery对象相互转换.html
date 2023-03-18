@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="jquery.js"></script>
+</head>
+<body>
+<video src=""></video>
+<script>
+  //DOM对象转换为jQuery对象
+  //（1）.我们直接获取视频，得到的就是jQuery对象
+  // $('video');
+  //(2).我们已经使用原生js 获取过来的DOM对象
+  var myvideo = document.querySelector('video');
+  $(myvideo);
+  //2.jQuery对象转换为DOM对象
+  // $('video')[0].play();
+  $('video').get(0).play();
+
+
+
+</script>
+</body>
+</html>

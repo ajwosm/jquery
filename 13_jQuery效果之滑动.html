@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../jquery-1/jquery-3.5.1.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>下拉滑动</button>
+    <button>上拉滑动</button>
+    <button>切换滑动</button>
+<div></div>
+</body>
+<script>
+  $(function() {
+    var cont = $("button");
+    cont.eq(0).click(function(){
+        //下拉滑动
+        $("div").slideDown()
+    })
+      cont.eq(1).click(function(){
+          //下拉滑动
+          $("div").slideUp()
+      })
+      cont.eq(2).click(function(){
+          //下拉滑动
+          $("div").slideToggle()
+      })
+  })
+</script>
+</html>

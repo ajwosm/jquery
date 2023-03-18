@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../jquery-1/jquery-3.5.1.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+</body>
+<script>
+  $(function() {
+    $("button").eq(1).click(function(){
+        $("div").hide(1000,function(){
+            alert(1);
+        })
+    })
+      $("button").eq(0).click(function(){
+        $("div").show(1000,function(){
+            alert(2)
+        })
+    })
+      $("button").eq(2).click(function(){
+        $("div").toggle(1000,function (){
+            alert(3)
+        })
+          //一般情况下，我们都不加参数直接显示隐藏就可以了
+    })
+  })
+</script>
+</html>

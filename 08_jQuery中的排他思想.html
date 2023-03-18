@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../jquery-1/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+<div>
+    <img src="pic/微信图片_20230306221816.jpg" height="1641" width="2918"/></div>
+</body>
+<script>
+  $(function() {
+      $("button").mousemove(function(){
+          //当前元素变化北京颜色
+          $(this).css("background","pink")
+          //其余兄弟元素去掉背景颜色
+          $(this).siblings("button").css("background","")
+      })
+  })
+</script>
+</html>

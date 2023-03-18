@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="jquery.js"></script>
+</head>
+<body>
+<div class="father">
+    <div class="son">son</div>
+</div>
+<div class="nav">
+    <p>p</p>
+    <div>
+        <p>p</p>
+    </div>
+</div>
+<ul>
+    <li>兄弟</li>
+    <li>兄弟</li>
+    <li class="item">兄弟</li>
+    <li>兄弟</li>
+    <li>兄弟</li>
+    <li>兄弟</li>
+</ul>
+<ol>
+    <li>兄弟2</li>
+    <li>兄弟2</li>
+    <li class="item">兄弟2</li>
+    <li>兄弟2</li>
+    <li>兄弟2</li>
+    <li>兄弟2</li>
+</ol>
+
+<span class="current">true</span>
+<span>false</span>
+<img src="pic/img_1.png" height="367" width="712"/>
+
+</body>
+<script>
+  $(function(){
+      //用儿子选择父亲
+    console.log($(".son").parent())
+      //只选亲儿子 children("")子代选择器
+      // $(".nav").children("p").css("color","red")
+
+      //find()后代选择器
+      //find()后代选择器
+      $(".nav").find("p").css("color","red")
+      //兄弟选择  siblings 除自己外的所有兄弟
+        $("ul .item").siblings("li").css("color","red")
+      //第n个元素
+      var index = 4;
+      var index2 = 5;
+      //$("ol:eq(2)").css("color","blue")
+      $("ol li:eq("+index+")").css("color","blue")
+      //这种方法更加方便；推荐使用
+      //$("ol li").eq(3).css("color","skyblue")
+      $("ol li").eq(index2).css("color","skyblue")
+
+      //查找这个元素有没有这个class
+        console.log($("span:first").hasClass("current"))
+        console.log($("span:last").hasClass("current"))
+
+  })
+</script>
+</html>
